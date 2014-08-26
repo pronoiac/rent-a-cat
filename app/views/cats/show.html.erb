@@ -13,8 +13,8 @@
     <tr>
       <td><%= @cat.name %></td>
       <td><%= @cat.age %></td>
-      <td><%= @cat.sex %></td>
-      <td><%= @cat.color %></td>
+      <td><%= @cat.sex=="F" ? "Female" : "Male" %></td>
+      <td><%= @cat.color.capitalize %></td>
     </tr>
   </tbody>
 </table>
