@@ -1,0 +1,23 @@
+<h1>Enter a new cat!</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cat name:</th>
+      <th>age:</th>
+      <th>sex:</th>
+      <th>color:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @cat.name %></td>
+      <td><%= @cat.age %></td>
+      <td><%= @cat.sex %></td>
+      <td><%= @cat.color %></td>
+    </tr>
+  </tbody>
+</table>
+
+<strong>Description:</strong>
+<%= @cat.description %>
