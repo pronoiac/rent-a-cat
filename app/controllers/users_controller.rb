@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :login_only_once, only: [:new, :create]
+
   def new
     @user = User.new
     render :new
@@ -15,6 +17,12 @@ class UsersController < ApplicationController
       render :new
     end
   end
+  
+  def login_only_once
+    # logged in? go to cats index.
+    redirect_to cats_url if logged_in? 
+  end
+  
   
   private
   def user_params
