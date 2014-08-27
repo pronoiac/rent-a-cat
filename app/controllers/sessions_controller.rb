@@ -13,15 +13,18 @@ class SessionsController < ApplicationController
     )
 
     if user.nil?
-      render json: "Credentials were wrong"
+      flash.now[:errors] ||= [] << "Credentials were wrong"
+      render :new
     else
       session[:session_token] = user.session_token
-      render json: "Welcome back #{user.user_name}!"
+      flash[:notices] ||= [] << "Successfully logged in!"
+      redirect_to cats_url
     end
   end
   
   def destroy
     logout!
+    flash[:notices] ||= [] << "Successfully logged out!"
     redirect_to new_session_url
   end
   

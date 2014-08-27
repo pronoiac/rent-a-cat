@@ -1,6 +1,7 @@
 <h1>Log in!</h1>
 
 <form action="/session" method="post">
+  <%= render partial: "layouts/csrf" %>
   
   <label for="session_user_name">Username</label>
   <input type="text" name="user[user_name]" id="session_user_name">

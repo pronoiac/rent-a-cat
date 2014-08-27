@@ -3,6 +3,7 @@
 <%= render partial: "layouts/errors" %>
 
 <form action="/user" method="post">
+  <%= render partial: "layouts/csrf" %>
   
   <label for="user_user_name">Username</label>
   <input type="text" name="user[user_name]" id="user_user_name">
