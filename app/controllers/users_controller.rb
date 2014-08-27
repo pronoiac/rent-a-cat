@@ -5,10 +5,10 @@ class UsersController < ApplicationController
   end
   
   def create
-    # fail
     @user = User.new(user_params)
     if @user.save
       flash[:notices] ||= [] << "Success!"
+      session[:session_token] = @user.session_token
       redirect_to cats_url
     else
       flash.now[:errors] = @user.errors.full_messages
