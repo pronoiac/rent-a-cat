@@ -1,0 +1,14 @@
+<h1>Create new user login!</h1>
+
+<%= render partial: "layouts/errors" %>
+
+<form action="/user" method="post">
+  
+  <label for="user_user_name">Username</label>
+  <input type="text" name="user[user_name]" id="user_user_name">
+  <br>
+  <label for="user_password">Password</label>
+  <input type="password" name="user[password]" id="user_password">
+  <br>
+  <input type="submit" value="Make new user!">
+</form>
