@@ -1,5 +1,4 @@
 class Cat < ActiveRecord::Base
-
   CAT_COLORS = %w{black gray white brown orange}
 
   validates :name, presence: true
@@ -8,13 +7,11 @@ class Cat < ActiveRecord::Base
     message: "%{value} is not a recognized color"}
   validates :sex, inclusion: { in: %w(M F),
     message: "%{value} is not a recognized sex"}
-
+    
+  has_many :cat_rental_requests
   
   def self.colors
     CAT_COLORS
   end
-
-  private
-  
 end
 
