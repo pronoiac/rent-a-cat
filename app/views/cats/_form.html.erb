@@ -4,7 +4,6 @@
 
 <form action="<%= action_url %>" method="POST">
   <%= render partial: "layouts/csrf" %>
-  
   <input type="hidden" name="_method" value="<%= form_method %>">
 
   <label for="cat_name">Name:</label>

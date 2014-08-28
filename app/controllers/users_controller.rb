@@ -23,10 +23,9 @@ class UsersController < ApplicationController
     redirect_to cats_url if logged_in? 
   end
   
-  
   private
+  
   def user_params
     params.require(:user).permit(:user_name, :password)
   end
-  
 end
