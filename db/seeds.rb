@@ -6,7 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-cats = Cat.create([{ name: "Morris", age: 10, sex: "M", color: "orange" }, 
+cats = Cat.create([
+  # note: userid was added, but isn't accounted for here.
+  { name: "Morris", age: 10, sex: "M", color: "orange" }, 
   { name: "Fluffy", age: 8, sex: "F", color: "white" }])
   
 # :cat_id, :start_date, :end_date,
